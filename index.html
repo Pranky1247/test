@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="./css/index.css"/>
+        <style>
+            body{
+                background-color: #131221;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="main-container">
+            <div id="moving-bar-0"></div>
+            <div id="moving-bar-1"></div>
+            <!--Content Container.-->
+            <div id="content-container">
+                <div id="header-container">WEB GALLERY</div>
+                <!--Gallery Container.-->
+                <div id="gallery-container">
+                    <button id="add-image-button">Add Image</button>
+                    <div id="image-info-container">
+                        <div id="image-info-title" class="image-info">Title: None</div>
+                        <div id="image-info-author" class="image-info">Author: None</div>
+                        <div id="image-info-total-number" class="image-info">Total: None</div>
+                    </div>
+                    <button id="previous-image-button" class="image-functionality-buttons">Pervious</button>
+                    <button id="delete-image-button" class="image-functionality-buttons">Delete</button>
+                    <button id="next-image-button" class="image-functionality-buttons">Next</button>
+                    <button id="add-comment-button">Add Comment</button>
+                    <button id="previous-ten-comments-button">-10</button>
+                    <button id="next-ten-comments-button">+10</button>
+                    <!--Add-Image Window-->
+                    <div id="add-image-form-container">
+                        <div id="alert-string">Let's add your first image!</div>
+                        <form id="add-image-form">
+                            <label id="image-title-label" class="add-image-form-label">Title</label>
+                            <input type="text" id="add-image-form-title-input-field" class="add-image-form-input-field input-field" required/>
+                            <label id="image-author-label" class="add-image-form-label">Author</label>
+                            <input type="text" id="add-image-form-author-input-field" class="add-image-form-input-field input-field" required/>
+                            <label id="image-url-label" class="add-image-form-label">Image File</label>
+                            <input type="file" id="add-image-form-url-input-field" class="add-image-form-input-field input-field" required/>
+                            <button type="submit" id="add-image-form-submit-button">Submit</button>
+                        </form>
+                    </div>
+                    <!--Add-Image Window-->
+
+                    <!--Gallery-Picture-->
+                    <img id="gallery-picture"/>
+                    <!--Gallery-Picture Window-->
+                    <!--Comments Windows-->
+                    <div id="comments-container">
+                    </div>
+                    <!--Comments Windows-->
+                    
+                </div>
+                <!--Gallery Container.-->
+            </div>
+            <!--Content Container.-->
+        </div>
+        <script type="module"  src="./js/index.js"></script>
+        <script type="module" src="./js/api.js"></script>
+    </body>
+</html>

@@ -1,0 +1,441 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    background-color: #131221;
+}
+
+#moving-bar-0{
+    position: absolute;
+    content: "";
+    border: solid 10px white;
+    height: 300vh;
+    width: 300vw;
+    min-width: 100vw;
+    background-image: conic-gradient(transparent 180deg, transparent 90deg, transparent 0deg, red);
+    animation: rotate-0 10s linear infinite;
+}
+
+#moving-bar-1{
+    position: absolute;
+    content: "";
+    border: solid 10px white;
+    height: 300vh;
+    width: 300vw;
+    min-width: 100vw;
+    background-image: conic-gradient( red, transparent 180deg, transparent 90deg, transparent 0deg);
+    animation: rotate-1 10s linear infinite;
+}
+
+#main-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+    width: 97vw;
+    border-radius: 50px;
+    overflow: hidden;
+    position: absolute;
+}
+
+@keyframes rotate-0{
+    from{
+        transform: rotate(90deg);
+    }
+
+    to{
+        transform: rotate(450deg);
+    }
+}
+
+@keyframes rotate-1{
+    from{
+        transform: rotate(270deg);
+    }
+
+    to{
+        transform: rotate(-90deg);
+    }
+}
+
+#content-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 94.1vh;
+    width: 96.5vw;
+    border-radius: 44.3px;
+    background-color: #131221;
+    z-index: 1;
+}    
+
+#header-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5vh;
+    color: wheat;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    height: 5%;
+    width: 98.5%;
+    border-bottom: solid 2px white;
+    border-radius: 41px;
+    border: solid 5px white;
+}
+
+#gallery-container{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 95%;
+
+
+    min-height: 25%;
+    width: 98.8%;
+    border: solid 5px white;
+    border-radius: 41px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    transition: opacity 2s ease-in-out;
+}
+
+
+#add-image-form-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    height: 35%;
+    width: 15%;
+    border: solid 5px white;
+    border-radius: 41px;
+    transition: opacity 2s ease-in-out;
+    position: absolute;
+    z-index: 1;
+}
+
+#alert-string{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: solid 5px white;
+    /* For testing purpose only. */
+    /* border: solid 5px white; */
+    /* For testing purpose only. */
+    color: white;
+    width: 100%;
+    height: 10%;
+    font-size: 100%;
+    margin-bottom: 0.25vw;
+    color: red;
+}
+
+#add-image-form{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 100%;
+    height: 80%;
+    border-radius: 50px;
+    /* For testing purpose only. */
+    /* border: solid 2px white; */
+    /* For testing purpose only. */
+}
+
+#add-image-form-submit-button{
+    width: 50%;
+    border: solid 5px white;
+    border-radius: 50px;
+    background-color: white;
+}
+
+#add-image-form-submit-button:hover{
+    cursor: pointer;
+}
+
+#add-image-form-submit-button:active{
+    background-color: wheat;
+    border-color: wheat;
+}
+
+button:active{
+    background-color: wheat;
+    border-color: wheat;
+}
+
+#gallery-picture{
+    transition: opacity 2s ease-in-out; 
+    opacity: 0;
+    width: 41%;
+    height: 70%;
+    border: solid 2px white;
+    border-radius: 50px;
+}
+
+#comments-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    width: 20%;
+    min-height: 81%;
+    max-height: 81%;
+    border: solid 2px white;
+    border-radius: 50px;
+    opacity: 0;
+    transition: opacity 2s ease-in-out; 
+    overflow-y: auto;
+}
+#comment-entity{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:90%;
+    border: solid 2px white;
+    border-radius: 50px;
+    color: aliceblue;
+    margin: 2%; 
+}
+
+#comment-info{
+    text-align: center;
+    width: 90%;
+    height: 25%;
+    padding: 5%;
+
+}
+#comment-body{
+
+    word-break: break-all;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    padding: 10%;
+    padding-top: 0%;
+    width: 80%;
+    height: auto;
+    border-radius: 50px;
+}
+
+#delete-comment-button{
+    border-radius: 50px;
+    margin-bottom: 5%;
+}
+
+#add-image-button{
+    opacity: 0;
+    transition: opacity 2s ease-in-out; 
+    position: absolute;
+    top: 25%;
+    left: 8.6%;
+    width: 10%;
+    height: 5%;
+    border: solid 1px white;
+    border-radius: 50px;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+#add-image-button:active{
+    background-color: wheat;
+    border-color: wheat;
+}
+
+#image-info-container{
+    display: flex;
+    opacity: 0;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute; 
+    border: solid 2px white;
+    border-radius: 50px;
+    top: 10%;
+    left: 27%;
+    width: 41%;
+    height: 3%;
+    transition: opacity 2s ease-in-out; 
+}
+
+#previous-image-button{
+    width: 4.1%;
+    height: 4.1%;
+    left: 30%;
+}
+
+#next-image-button{
+    width: 4.1%;
+    height: 4.1%;
+    right: 34.9%;
+}
+
+#delete-image-button{
+    width: 4.1%;
+    height: 4.1%;
+    right: 50%;
+}
+
+#add-comment-button{
+    position: absolute;
+    cursor: pointer;
+    border-radius: 50px;
+    height: 4.1%;
+    width: 20%;
+    bottom: 4%;
+    right: 5.9%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out; 
+}
+
+#add-comment-form{
+    margin-top: 3%;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center;
+    justify-content: center; */
+    width: 90%;
+    height: auto;
+    min-width: 30%;
+    max-width: 80%;
+    border: solid 2px red;
+    border-radius: 20px;
+    padding: 5%;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+#add-comment-form-author-label{
+    text-align: center;
+}
+
+#add-comment-form-author-input-field{
+    width: 41%;
+    align-self: center;
+}
+
+#add-comment-form-content-label{
+    text-align: center;
+}
+
+#add-comment-form-content-input-field{
+    border-radius: 0;
+    height: 50px;
+}
+
+#add-comment-form-submit-button{
+    align-self: center;
+    width: 30%;
+    height: auto;
+    border-radius: 50px;
+    position: relative;
+    left: 35%;
+}
+
+#add-comment-form-cancel-button{
+    border-radius: 50px;
+    position: relative;
+    left: 40%;
+}
+
+#add-comment-form-button-container{
+    display: flex;
+}
+
+#previous-ten-comments-button{
+    opacity: 0;
+    position: absolute;
+    width: 3%;
+    height: 3%;
+    right: 21%;
+    top: 6.1%;
+    border-radius: 50px;
+    transition: opacity 1s ease-in-out; 
+
+}
+
+#next-ten-comments-button{
+    opacity: 0;
+    position: absolute;
+    width: 3%;
+    height: 3%;
+    right: 8%;
+    top: 6.1%;
+    border-radius: 50px;
+    transition: opacity 1s ease-in-out; 
+}
+
+#add-image-form-url-input-field{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.comment-delete-button{
+    width: 20%;
+    height: 10%;
+    font-size: 10px;
+}
+
+.add-comment-form-label{
+    color: white;
+}
+
+.add-comment-form-input-field{
+    border-radius: 50px;
+}
+
+.image-functionality-buttons{
+    opacity: 0;
+    position: absolute;
+    bottom: 9.2%;
+    border: solid 2px #131221;
+    border-radius: 50px;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    transition: opacity 1s ease-in-out; 
+}
+
+.image-info{
+    color: white;
+}
+
+.add-image-form-label{
+    font-size: 14px;
+    color: white;
+}
+
+.add-image-form-input-field{
+    width: 90%;
+    height: 2vh;
+    border: solid 2px white;
+    border-radius: 50px;
+}
+
+
+/* This will remove the visual border changing effect when you click on those input fields.*/
+.input-field:focus{
+    outline: none;
+}
+
+.comment-active-entity{
+    border: solid 2px red;
+}
+
+input{
+    text-align: center;
+}
+button{
+    cursor: pointer;
+}
+
